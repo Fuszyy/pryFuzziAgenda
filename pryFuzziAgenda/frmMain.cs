@@ -102,5 +102,17 @@ namespace pryFuzziAgenda
                 txtMail.Enabled = false;
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+            DialogResult result = MessageBox.Show("¿Está seguro de que quiere Eliminar este contacto?", "Eliminar contacto.", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                dgvContacts.Rows.Remove(dgvContacts.CurrentRow);
+                MessageBox.Show("Datos eliminados correctamente.", "Proceso finalizado.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+        }
     }
 }
