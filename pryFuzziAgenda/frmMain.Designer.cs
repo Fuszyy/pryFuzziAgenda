@@ -42,104 +42,96 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvContacts = new System.Windows.Forms.DataGridView();
             this.columnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnSurname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.columnMail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtMail = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContacts)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(221, 9);
-            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitle.Location = new System.Drawing.Point(258, 9);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(209, 25);
+            this.lblTitle.Size = new System.Drawing.Size(175, 20);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Gestionar Contactos";
             // 
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(208, 55);
-            this.lblName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblName.Location = new System.Drawing.Point(248, 47);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(74, 16);
+            this.lblName.Size = new System.Drawing.Size(58, 13);
             this.lblName.TabIndex = 1;
             this.lblName.Text = "Nombre(s):";
             // 
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(217, 122);
-            this.lblPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPhone.Location = new System.Drawing.Point(255, 101);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(64, 16);
+            this.lblPhone.Size = new System.Drawing.Size(52, 13);
             this.lblPhone.TabIndex = 5;
             this.lblPhone.Text = "Teléfono:";
             // 
             // lblMail
             // 
             this.lblMail.AutoSize = true;
-            this.lblMail.Location = new System.Drawing.Point(231, 156);
-            this.lblMail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMail.Location = new System.Drawing.Point(265, 129);
             this.lblMail.Name = "lblMail";
-            this.lblMail.Size = new System.Drawing.Size(51, 16);
+            this.lblMail.Size = new System.Drawing.Size(41, 13);
             this.lblMail.TabIndex = 7;
             this.lblMail.Text = "Correo:";
             // 
             // lblSurname
             // 
             this.lblSurname.AutoSize = true;
-            this.lblSurname.Location = new System.Drawing.Point(223, 87);
-            this.lblSurname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSurname.Location = new System.Drawing.Point(259, 73);
             this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(60, 16);
+            this.lblSurname.Size = new System.Drawing.Size(47, 13);
             this.lblSurname.TabIndex = 3;
             this.lblSurname.Text = "Apellido:";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(293, 51);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Location = new System.Drawing.Point(312, 43);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(165, 22);
+            this.txtName.Size = new System.Drawing.Size(125, 20);
             this.txtName.TabIndex = 2;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             // 
             // txtSurname
             // 
             this.txtSurname.Enabled = false;
-            this.txtSurname.Location = new System.Drawing.Point(293, 83);
-            this.txtSurname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSurname.Location = new System.Drawing.Point(312, 69);
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(131, 22);
+            this.txtSurname.Size = new System.Drawing.Size(99, 20);
             this.txtSurname.TabIndex = 4;
             this.txtSurname.TextChanged += new System.EventHandler(this.txtSurname_TextChanged);
             // 
             // txtPhone
             // 
             this.txtPhone.Enabled = false;
-            this.txtPhone.Location = new System.Drawing.Point(292, 119);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPhone.Location = new System.Drawing.Point(311, 99);
             this.txtPhone.Mask = "000-000-0000";
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(90, 22);
+            this.txtPhone.Size = new System.Drawing.Size(68, 20);
             this.txtPhone.TabIndex = 6;
             this.txtPhone.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtPhone_MaskInputRejected);
+            this.txtPhone.TextChanged += new System.EventHandler(this.txtPhone_TextChanged);
             // 
             // lblCategory
             // 
             this.lblCategory.AutoSize = true;
-            this.lblCategory.Location = new System.Drawing.Point(211, 186);
-            this.lblCategory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCategory.Location = new System.Drawing.Point(250, 153);
             this.lblCategory.Name = "lblCategory";
-            this.lblCategory.Size = new System.Drawing.Size(69, 16);
+            this.lblCategory.Size = new System.Drawing.Size(57, 13);
             this.lblCategory.TabIndex = 9;
             this.lblCategory.Text = "Categoría:";
             // 
@@ -153,18 +145,16 @@
             "Amigos",
             "Trabajo",
             "Otros.."});
-            this.cbxCategory.Location = new System.Drawing.Point(292, 183);
-            this.cbxCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxCategory.Location = new System.Drawing.Point(311, 151);
             this.cbxCategory.Name = "cbxCategory";
-            this.cbxCategory.Size = new System.Drawing.Size(132, 24);
+            this.cbxCategory.Size = new System.Drawing.Size(100, 21);
             this.cbxCategory.TabIndex = 10;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(349, 454);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Location = new System.Drawing.Point(450, 369);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(100, 28);
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 12;
             this.btnAdd.Text = "Agregar";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -172,39 +162,40 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(457, 454);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEdit.Location = new System.Drawing.Point(531, 369);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(100, 28);
+            this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 13;
             this.btnEdit.Text = "Editar";
             this.btnEdit.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(566, 454);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Location = new System.Drawing.Point(612, 369);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(100, 28);
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 14;
             this.btnDelete.Text = "Eliminar";
             this.btnDelete.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvContacts
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvContacts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvContacts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.columnName,
             this.columnSurname,
             this.columnPhone,
             this.columnMail,
             this.ColumnCategory});
-            this.dataGridView1.Location = new System.Drawing.Point(10, 216);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(659, 228);
-            this.dataGridView1.TabIndex = 11;
+            this.dgvContacts.Enabled = false;
+            this.dgvContacts.Location = new System.Drawing.Point(7, 179);
+            this.dgvContacts.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvContacts.Name = "dgvContacts";
+            this.dgvContacts.RowHeadersWidth = 51;
+            this.dgvContacts.RowTemplate.Height = 24;
+            this.dgvContacts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvContacts.Size = new System.Drawing.Size(675, 185);
+            this.dgvContacts.TabIndex = 11;
             // 
             // columnName
             // 
@@ -244,20 +235,19 @@
             // txtMail
             // 
             this.txtMail.Enabled = false;
-            this.txtMail.Location = new System.Drawing.Point(290, 153);
-            this.txtMail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMail.Location = new System.Drawing.Point(310, 126);
             this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(168, 22);
+            this.txtMail.Size = new System.Drawing.Size(127, 20);
             this.txtMail.TabIndex = 15;
             this.txtMail.TextChanged += new System.EventHandler(this.txtMail_TextChanged);
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(679, 490);
+            this.ClientSize = new System.Drawing.Size(693, 398);
             this.Controls.Add(this.txtMail);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvContacts);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
@@ -272,13 +262,12 @@
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblTitle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Agenda de Contactos";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContacts)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,7 +288,7 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvContacts;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnName;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnSurname;
         private System.Windows.Forms.DataGridViewTextBoxColumn columnPhone;

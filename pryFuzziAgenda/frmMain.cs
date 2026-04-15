@@ -24,23 +24,47 @@ namespace pryFuzziAgenda
 
         private void txtName_TextChanged(object sender, EventArgs e)
         {
-            txtSurname.Enabled = true;
+            if (txtName.Text != "")
+            {
+                txtSurname.Enabled = true;
+            }
+            else
+            {
+                txtSurname.Clear();
+                txtSurname.Enabled = false;
+            }
         }
 
         private void txtSurname_TextChanged(object sender, EventArgs e)
         {
-            txtPhone.Enabled = true;
+            if (txtSurname.Text != "")
+            {
+                txtPhone.Enabled = true;
+            }
+            else
+            {
+                txtPhone.Clear();
+                txtPhone.Enabled = false;
+            }
         }
 
         private void txtPhone_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-            txtMail.Enabled = true;
+        
         }
 
 
         private void txtMail_TextChanged(object sender, EventArgs e)
         {
-            cbxCategory.Enabled = true;
+            if (txtMail.Text != "")
+            {
+                cbxCategory.Enabled = true;
+            }
+            else
+            {
+                cbxCategory.SelectedItem = null;
+                cbxCategory.Enabled = false;
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -52,6 +76,30 @@ namespace pryFuzziAgenda
             else
             {
                 MessageBox.Show("Datos Guardados correctamente.", "Tarea Completada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                dgvContacts.Rows.Add(txtName.Text, txtSurname.Text, txtPhone.Text, txtMail.Text, cbxCategory.Text);
+                txtName.Text = string.Empty;
+                txtPhone.Text = string.Empty;
+                txtMail.Text = string.Empty;
+                txtSurname.Text = string.Empty;
+                cbxCategory.SelectedItem = null;
+
+                txtPhone.Enabled = false;
+                txtMail.Enabled = false;
+                txtSurname.Enabled = false;
+                cbxCategory.Enabled = false;
+            }
+        }
+
+        private void txtPhone_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPhone.Text != "")
+            {
+                txtMail.Enabled = true;
+            }
+            else
+            {
+                txtMail.Clear();
+                txtMail.Enabled = false;
             }
         }
     }
