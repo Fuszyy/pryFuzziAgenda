@@ -106,7 +106,7 @@
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(407, 53);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(165, 22);
             this.txtName.TabIndex = 2;
@@ -116,7 +116,7 @@
             // 
             this.txtSurname.Enabled = false;
             this.txtSurname.Location = new System.Drawing.Point(407, 85);
-            this.txtSurname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSurname.Margin = new System.Windows.Forms.Padding(4);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.Size = new System.Drawing.Size(131, 22);
             this.txtSurname.TabIndex = 4;
@@ -126,7 +126,7 @@
             // 
             this.txtPhone.Enabled = false;
             this.txtPhone.Location = new System.Drawing.Point(406, 122);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhone.Mask = "000-000-0000";
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(89, 22);
@@ -155,7 +155,7 @@
             "Trabajo",
             "Otros.."});
             this.cbxCategory.Location = new System.Drawing.Point(406, 186);
-            this.cbxCategory.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbxCategory.Margin = new System.Windows.Forms.Padding(4);
             this.cbxCategory.Name = "cbxCategory";
             this.cbxCategory.Size = new System.Drawing.Size(132, 24);
             this.cbxCategory.TabIndex = 10;
@@ -163,7 +163,7 @@
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(556, 454);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(100, 28);
             this.btnAdd.TabIndex = 12;
@@ -174,17 +174,18 @@
             // btnEdit
             // 
             this.btnEdit.Location = new System.Drawing.Point(664, 454);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(100, 28);
             this.btnEdit.TabIndex = 13;
             this.btnEdit.Text = "Editar";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(772, 454);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 28);
             this.btnDelete.TabIndex = 14;
@@ -250,7 +251,7 @@
             // 
             this.txtMail.Enabled = false;
             this.txtMail.Location = new System.Drawing.Point(404, 155);
-            this.txtMail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMail.Margin = new System.Windows.Forms.Padding(4);
             this.txtMail.Name = "txtMail";
             this.txtMail.Size = new System.Drawing.Size(168, 22);
             this.txtMail.TabIndex = 15;
@@ -277,7 +278,7 @@
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblTitle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

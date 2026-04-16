@@ -50,7 +50,7 @@ namespace pryFuzziAgenda
 
         private void txtPhone_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
-        
+
         }
 
 
@@ -105,14 +105,59 @@ namespace pryFuzziAgenda
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
-            DialogResult result = MessageBox.Show("¿Está seguro de que quiere Eliminar este contacto?", "Eliminar contacto.", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (result == DialogResult.Yes)
+            if (dgvContacts.CurrentRow == null)
             {
-                dgvContacts.Rows.Remove(dgvContacts.CurrentRow);
-                MessageBox.Show("Datos eliminados correctamente.", "Proceso finalizado.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("No hay un contacto seleccionado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                DialogResult result = MessageBox.Show("¿Está seguro de que quiere Eliminar este contacto?", "Eliminar contacto.", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    dgvContacts.Rows.Remove(dgvContacts.CurrentRow);
+                    MessageBox.Show("Datos eliminados correctamente.", "Proceso finalizado.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
 
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+
+            DialogResult result2 = MessageBox.Show("¿Editar los datos de este contacto?", "Editar contacto.", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result2 == DialogResult.Yes)
+            {
+                if (dgvContacts.CurrentRow == null)
+                {
+                    MessageBox.Show("No hay un contacto seleccionado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    if (txtName.Text == "" || txtSurname.Text == "" || txtPhone.Text == "" || txtMail.Text == "" || cbxCategory.Text == "")
+                    {
+                        MessageBox.Show("Complete los datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        dgvContacts.CurrentRow.Cells[0].Value = txtName.Text;
+                        dgvContacts.CurrentRow.Cells[1].Value = txtSurname.Text;
+                        dgvContacts.CurrentRow.Cells[2].Value = txtPhone.Text;
+                        dgvContacts.CurrentRow.Cells[3].Value = txtMail.Text;
+                        dgvContacts.CurrentRow.Cells[4].Value = cbxCategory.Text;
+                        MessageBox.Show("Contacto editado correctamente.", "Proceso finalizado.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtName.Text = string.Empty;
+                        txtPhone.Text = string.Empty;
+                        txtMail.Text = string.Empty;
+                        txtSurname.Text = string.Empty;
+                        cbxCategory.SelectedItem = null;
+
+                        txtPhone.Enabled = false;
+                        txtMail.Enabled = false;
+                        txtSurname.Enabled = false;
+                        cbxCategory.Enabled = false;
+                    }
+                }
+            }
         }
     }
 }
