@@ -159,5 +159,19 @@ namespace pryFuzziAgenda
                 }
             }
         }
+
+        private void btnExp_Click(object sender, EventArgs e)
+        {
+            if (btnExp.Text == "Mostrar contactos >>>")
+            {
+                this.Width = 915;
+                btnExp.Text = "Ocultar contactos <<<";
+            }
+            else
+            {
+                this.Width = 269;
+                btnExp.Text = "Mostrar contactos >>>";
+            }
+        }
     }
 }
